@@ -1,0 +1,33 @@
+---
+import "../global.css"
+import Navigation from '../components/Navigation.astro';
+import Hero from '../components/Hero.astro';
+import Services from '../components/Services.astro';
+import About from '../components/About.astro';
+import Contact from '../components/Contact.astro';
+import Footer from '../components/Footer.astro';
+const {title} = Astro.props;
+const {theme} = Astro.props;
+
+---
+
+<!DOCTYPE html>
+<html lang="en" data-theme={theme}>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{title}</title>
+</head>
+<body class="bg-gray-100 font-sans">
+
+<Navigation title ={title}/>
+
+<Hero />
+
+<About />
+
+<Services />
+<Contact />
+<Footer title ={title}/>
+</body>
+</html>
